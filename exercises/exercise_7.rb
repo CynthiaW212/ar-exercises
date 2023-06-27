@@ -10,3 +10,9 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+user_store = Store.new(name: "SaskaTel")
+unless user_store.save
+  user_store.errors.full_messages.each do |message|
+    puts "error occured: #{message}" 
+  end
+end
